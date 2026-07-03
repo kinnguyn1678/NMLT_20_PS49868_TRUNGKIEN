@@ -1,31 +1,34 @@
 #include <stdio.h>
 
 int main() {
-    char mssv[30];
-    char hoten[100];
-    int namsinh;
-    int tuoi;
-    float dtb;
+    char mssv[20];
+    char hoTen[100];
+    int namSinh;
+    float diemTB;
 
-    printf("Nhap MSSV: ");
-    fgets(mssv, sizeof(mssv), stdin);
+    // Nhap du lieu
+    printf("Nhap ma so sinh vien: ");
+    scanf("%s", mssv);
 
-    printf("Nhap Ho Va Ten: ");
-    fgets(hoten, sizeof(hoten), stdin);
+    printf("Nhap ho va ten: ");
+    scanf(" %[^\n]", hoTen); // doc chuoi co khoang trang
 
-    printf("Nhap Nam Sinh: ");
-    scanf("%d", &namsinh);
+    printf("Nhap nam sinh: ");
+    scanf("%d", &namSinh);
 
-    printf("Nhap Diem Trung Binh: ");
-    scanf("%f", &dtb);
+    printf("Nhap diem trung binh: ");
+    scanf("%f", &diemTB);
 
-    tuoi = 2026 - namsinh;
+    // Tinh tuoi
+    int tuoi = 2026 - namSinh;
 
-    printf("\nMa so sinh vien: %s", mssv);
-    printf("Ho Va Ten: %s", hoten);
-    printf("Nam sinh: %d\n", namsinh);
+    // Xuat du lieu
+    printf("\n");
+    printf("Ma so sinh vien: %s\n", mssv);
+    printf("Ho Va Ten: %s\n", hoTen);
+    printf("Nam sinh: %d\n", namSinh);
     printf("Tuoi: %d\n", tuoi);
-    printf("Diem Trung Binh: %.2f\n", dtb);
+    printf("Diem Trung Binh: %.2f\n", diemTB);
 
     return 0;
 }

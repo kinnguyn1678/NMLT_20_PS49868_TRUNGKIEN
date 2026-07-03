@@ -1,30 +1,35 @@
 #include <stdio.h>
 
 int main() {
-    char mssv[30];
-    char hoten[100];
-    float toan, ly, hoa, dtb;
+    char mssv[20];
+    char hoTen[100];
+    float diemToan, diemLy, diemHoa;
+    float diemTB;
 
-    printf("Nhap MSSV: ");
-    fgets(mssv, sizeof(mssv), stdin);
+    // Nhap du lieu
+    printf("Nhap ma so sinh vien: ");
+    scanf("%s", mssv);
 
-    printf("Nhap Ho Va Ten: ");
-    fgets(hoten, sizeof(hoten), stdin);
+    printf("Nhap ho va ten: ");
+    scanf(" %[^\n]", hoTen); // doc chuoi co khoang trang
 
-    printf("Nhap Diem Toan: ");
-    scanf("%f", &toan);
+    printf("Nhap diem Toan: ");
+    scanf("%f", &diemToan);
 
-    printf("Nhap Diem Ly: ");
-    scanf("%f", &ly);
+    printf("Nhap diem Ly: ");
+    scanf("%f", &diemLy);
 
-    printf("Nhap Diem Hoa: ");
-    scanf("%f", &hoa);
+    printf("Nhap diem Hoa: ");
+    scanf("%f", &diemHoa);
 
-    dtb = (toan * 2 + ly + hoa) / 4;
+    // Tinh diem trung binh (Toan he so 2)
+    diemTB = (diemToan * 2 + diemLy + diemHoa) / 4;
 
-    printf("\nMa so sinh vien: %s", mssv);
-    printf("Ho Va Ten: %s", hoten);
-    printf("Diem Trung Binh: %.2f\n", dtb);
+    // Xuat du lieu
+    printf("\n");
+    printf("Ma so sinh vien: %s\n", mssv);
+    printf("Ho Va Ten: %s\n", hoTen);
+    printf("Diem Trung Binh: %.2f\n", diemTB);
 
     return 0;
 }
