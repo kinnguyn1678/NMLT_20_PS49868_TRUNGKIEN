@@ -1,35 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    char mssv[20];
-    char hoTen[100];
-    float diemToan, diemLy, diemHoa;
-    float diemTB;
+    float a, b, x;
 
-    // Nhap du lieu
-    printf("Nhap ma so sinh vien: ");
-    scanf("%s", mssv);
+    printf("===== GIAI PHUONG TRINH BAC NHAT ax + b = 0 =====\n");
+    printf("Nhap he so a: ");
+    scanf("%f", &a);
+    printf("Nhap he so b: ");
+    scanf("%f", &b);
 
-    printf("Nhap ho va ten: ");
-    scanf(" %[^\n]", hoTen); // doc chuoi co khoang trang
+    // Gia dinh a luon khac 0
+    x = -b / a;
 
-    printf("Nhap diem Toan: ");
-    scanf("%f", &diemToan);
-
-    printf("Nhap diem Ly: ");
-    scanf("%f", &diemLy);
-
-    printf("Nhap diem Hoa: ");
-    scanf("%f", &diemHoa);
-
-    // Tinh diem trung binh (Toan he so 2)
-    diemTB = (diemToan * 2 + diemLy + diemHoa) / 4;
-
-    // Xuat du lieu
-    printf("\n");
-    printf("Ma so sinh vien: %s\n", mssv);
-    printf("Ho Va Ten: %s\n", hoTen);
-    printf("Diem Trung Binh: %.2f\n", diemTB);
+    printf("Phuong trinh: %.2fx + %.2f = 0\n", a, b);
+    printf("Nghiem x = %.2f\n", x);
 
     return 0;
 }
